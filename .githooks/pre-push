@@ -80,6 +80,10 @@ if ! bun install --frozen-lockfile >/tmp/omp-lock.log 2>&1; then
 fi
 echo -e "${GRN}✓${RST} lockfile matches"
 
+# git exports GIT_DIR/GIT_INDEX_FILE to hooks; tests that make scratch repos would
+# otherwise commit into the repo being pushed.
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_PREFIX GIT_COMMON_DIR
+
 echo -e "${DIM}pre-push: typecheck${RST}"
 if ! bun run typecheck >/tmp/omp-typecheck.log 2>&1; then
   echo -e "${RED}✗${RST} typecheck failed:"
