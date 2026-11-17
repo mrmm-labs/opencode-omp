@@ -241,7 +241,7 @@ export function buildPlans(): Plan[] {
 
 /** Fold commits into a dated changelog section, preserving manual [Unreleased] prose. */
 /** Repository the changelog compare/tag links point at. */
-export const REPO = "https://github.com/mrmm/opencode-omp";
+export const REPO = "https://github.com/mrmm-labs/opencode-omp";
 
 export function renderChangelog(existing: string, plan: Plan): string {
 	const today = new Date().toISOString().slice(0, 10);

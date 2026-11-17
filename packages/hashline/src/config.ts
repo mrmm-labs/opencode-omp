@@ -3,7 +3,7 @@ import {
 	layeredConfig,
 	sanitizeTelemetryConfig,
 	type TelemetryConfig,
-} from "@mrmm/telemetry";
+} from "@mrmm-labs/telemetry";
 
 export type PromptStyle = "full" | "brief" | "none";
 export type TagPosition = "after-type" | "before-content" | "top";

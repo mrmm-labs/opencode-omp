@@ -7,9 +7,9 @@ rather than reimplementing them.
 
 | Package | What | Install size |
 |---|---|---|
-| [`@mrmm/opencode-omp-hashline`](packages/hashline) | File-hash-anchored patch editing | **~400 KB** (native-free) |
-| [`@mrmm/opencode-omp-snapcompact`](packages/snapcompact) | Density-gated bitmap context compression | ~180 MB (needs the native rasterizer) |
-| [`@mrmm/telemetry`](packages/telemetry) | Local-first telemetry — standalone, reusable | 0 deps |
+| [`@mrmm-labs/opencode-omp-hashline`](packages/hashline) | File-hash-anchored patch editing | **~400 KB** (native-free) |
+| [`@mrmm-labs/opencode-omp-snapcompact`](packages/snapcompact) | Density-gated bitmap context compression | ~180 MB (needs the native rasterizer) |
+| [`@mrmm-labs/telemetry`](packages/telemetry) | Local-first telemetry — standalone, reusable | 0 deps |
 
 Separate packages so hashline users never pull snapcompact's 139 MB native addon.
 
@@ -83,7 +83,7 @@ prose-heavy sessions materially worse.
 ## Install
 
 ```sh
-bun add @mrmm/opencode-omp-hashline
+bun add @mrmm-labs/opencode-omp-hashline
 ```
 
 > **On registries.** Releases go to npmjs (primary) and are mirrored to this
@@ -93,7 +93,7 @@ bun add @mrmm/opencode-omp-hashline
 > `read:packages`:
 >
 > ```sh
-> echo '@mrmm:registry=https://npm.pkg.github.com' >> ~/.npmrc
+> echo '@mrmm-labs:registry=https://npm.pkg.github.com' >> ~/.npmrc
 > echo "//npm.pkg.github.com/:_authToken=$(gh auth token)" >> ~/.npmrc
 > ```
 
@@ -102,8 +102,8 @@ bun add @mrmm/opencode-omp-hashline
 // ~/.config/opencode/opencode.jsonc
 {
   "plugin": [
-    "@mrmm/opencode-omp-hashline"
-    // "@mrmm/opencode-omp-snapcompact"   // opt-in; see its README
+    "@mrmm-labs/opencode-omp-hashline"
+    // "@mrmm-labs/opencode-omp-snapcompact"   // opt-in; see its README
   ]
 }
 ```
@@ -169,7 +169,7 @@ without this repository implementing transport.
 Disable anywhere:
 
 ```jsonc
-["@mrmm/opencode-omp-hashline", { "telemetry": false }]
+["@mrmm-labs/opencode-omp-hashline", { "telemetry": false }]
 ```
 
 See [packages/telemetry](packages/telemetry) for the full contract.

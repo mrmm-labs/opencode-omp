@@ -100,7 +100,7 @@ describe("dependency-only bumps explain themselves", () => {
 
 	/** A propagated bump: real reason, no commits of its own. */
 	const propagated: Plan = {
-		name: "@mrmm/opencode-omp-hashline",
+		name: "@mrmm-labs/opencode-omp-hashline",
 		tagName: "opencode-omp-hashline",
 		dirName: "hashline",
 		dir: "packages/hashline",

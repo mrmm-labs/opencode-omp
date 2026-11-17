@@ -1,4 +1,4 @@
-# @mrmm/telemetry
+# @mrmm-labs/telemetry
 
 Local-first telemetry with an optional OpenTelemetry bridge.
 
@@ -40,7 +40,7 @@ Transport lives entirely in the host's SDK.
 ## Usage
 
 ```ts
-import { createTelemetry } from "@mrmm/telemetry";
+import { createTelemetry } from "@mrmm-labs/telemetry";
 
 const tel = createTelemetry({
   service: "my-tool",
