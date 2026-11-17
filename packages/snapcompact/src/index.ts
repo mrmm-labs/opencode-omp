@@ -21,7 +21,7 @@ import { fileURLToPath } from "node:url";
 
 import type { Plugin } from "@opencode-ai/plugin";
 import { tool } from "@opencode-ai/plugin";
-import { createTelemetry } from "@mrmm/telemetry";
+import { createTelemetry } from "@mrmm-labs/telemetry";
 
 import { resolveConfig, type SnapcompactConfig } from "./config.ts";
 import { density, shouldCompact, type Decision } from "./density.ts";

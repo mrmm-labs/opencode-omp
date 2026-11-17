@@ -104,7 +104,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           {
-            echo "@mrmm:registry=https://npm.pkg.github.com"
+            echo "@mrmm-labs:registry=https://npm.pkg.github.com"
             echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}"
           } > ~/.npmrc
 

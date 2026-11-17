@@ -1,5 +1,5 @@
 {
-  "name": "@mrmm/opencode-omp-snapcompact",
+  "name": "@mrmm-labs/opencode-omp-snapcompact",
   "version": "0.4.1",
   "type": "module",
   "description": "OpenCode plugin: density-gated bitmap context compression, backed by @oh-my-pi/snapcompact. Renders dense text to PNG frames vision models read back.",
@@ -12,14 +12,14 @@
     "tokens",
     "llm"
   ],
-  "homepage": "https://github.com/mrmm/opencode-omp/tree/main/packages/snapcompact",
+  "homepage": "https://github.com/mrmm-labs/opencode-omp/tree/main/packages/snapcompact",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrmm/opencode-omp.git",
+    "url": "git+https://github.com/mrmm-labs/opencode-omp.git",
     "directory": "packages/snapcompact"
   },
   "bugs": {
-    "url": "https://github.com/mrmm/opencode-omp/issues"
+    "url": "https://github.com/mrmm-labs/opencode-omp/issues"
   },
   "license": "MIT",
   "main": "./src/index.ts",
@@ -49,7 +49,7 @@
   "dependencies": {
     "@oh-my-pi/snapcompact": "^17.1.3",
     "js-tiktoken": "^1.0.21",
-    "@mrmm/telemetry": "workspace:*"
+    "@mrmm-labs/telemetry": "workspace:*"
   },
   "peerDependencies": {
     "@opencode-ai/plugin": ">=1.17.0"

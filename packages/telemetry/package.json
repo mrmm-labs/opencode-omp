@@ -1,5 +1,5 @@
 {
-  "name": "@mrmm/telemetry",
+  "name": "@mrmm-labs/telemetry",
   "version": "0.3.0",
   "type": "module",
   "description": "Local-first telemetry with an optional OpenTelemetry bridge. JSONL by default, zero dependencies, no network.",
@@ -12,14 +12,14 @@
     "local-first",
     "observability"
   ],
-  "homepage": "https://github.com/mrmm/opencode-omp/tree/main/packages/telemetry",
+  "homepage": "https://github.com/mrmm-labs/opencode-omp/tree/main/packages/telemetry",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrmm/opencode-omp.git",
+    "url": "git+https://github.com/mrmm-labs/opencode-omp.git",
     "directory": "packages/telemetry"
   },
   "bugs": {
-    "url": "https://github.com/mrmm/opencode-omp/issues"
+    "url": "https://github.com/mrmm-labs/opencode-omp/issues"
   },
   "license": "MIT",
   "main": "./src/index.ts",
