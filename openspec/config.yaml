@@ -1,0 +1,32 @@
+schema: spec-driven
+
+context: |
+  Bun workspace monorepo of OpenCode plugins backed by oh-my-pi libraries. Packages version
+  independently: @mrmm-labs/opencode-omp-hashline (stable, ~400 KB, no native deps),
+  @mrmm-labs/opencode-omp-snapcompact (experimental, pulls a ~139 MB native dependency) and
+  @mrmm-labs/telemetry (local-first telemetry, optional OpenTelemetry bridge).
+
+  Stack: bun, TypeScript. Tests: bun test. Typecheck: bun run typecheck.
+  Everything CI runs: bun run check (typecheck, tests, version hygiene gate). Tool versions: mise.toml.
+
+  Release is automatic, not release-please: every push to main derives each package's next version
+  from conventional commits and the files a commit touched (paths decide which package moves, not
+  scopes). chore, docs, ci, test and similar commits release nothing. Tags are <package>@<version>;
+  bare vX.Y.Z tags are rejected. Details: CONTRIBUTING.md.
+
+  Earlier design specs live in .specs/ (hashline, snapcompact). openspec/specs/ is the baseline that
+  new changes diff against; keep both honest and prefer openspec/ for anything new.
+
+  Telemetry must never break its caller and the default path has no network code (enforced by test).
+  Never put credentials, real account names or home paths in specs, examples or fixtures.
+
+rules:
+  proposal:
+    - State what is out of scope.
+    - State which package or packages the change touches, because that decides the release bump.
+    - State whether the change is breaking for config, tool args or tool output shape.
+  specs:
+    - Write scenarios as WHEN/THEN; each scenario becomes at least one test.
+  tasks:
+    - Each task names its verification step (a test or bun run check).
+    - Keep each task under 2 hours.

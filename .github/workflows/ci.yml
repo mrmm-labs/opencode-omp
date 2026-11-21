@@ -35,6 +35,18 @@ jobs:
       - name: test
         run: bun test
 
+  openspec:
+    name: openspec validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: jdx/mise-action@v2
+        with:
+          install_args: node npm:@fission-ai/openspec
+
+      - run: openspec validate --all --strict
+
   hygiene:
     name: version + tagging hygiene
     runs-on: ubuntu-latest
